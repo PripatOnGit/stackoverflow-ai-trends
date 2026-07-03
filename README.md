@@ -33,3 +33,67 @@ To ensure longitudinal consistency, the following schema mapping boundaries have
    * *Senior Cohort:* $\ge$ 8 Years Professional Experience
 2. **AI Tool Adoption:** Tracked via `AISelect` (Binary: Yes/No context).
 3. **AI Trust Metrics:** Tracked via `AITrust` (Ordinal scale assessing automated tool output reliability).
+
+
+## 🔄 Project Phase: 3. PROCESS & 4. ANALYZE
+
+### 🗄️ SQL Data Transformation & Aggregation
+To extract data-driven insights across historical periods, the raw 2024 and 2025 microdata tables were compiled into a centralized tracking table (`raw_survey_data`). Window functions (`PARTITION BY`) were applied to handle shifting denominator sizes across survey years.
+
+#### Query 1: Overall YoY AI Tool Adoption Rate
+```sql
+SELECT 
+    survey_year,
+    "AISelect" AS ai_use_status,
+    COUNT(*) AS developer_count,
+    ROUND(COUNT(*) * 100.0 / SUM(COUNT(*)) OVER(PARTITION BY survey_year), 2) AS percentage
+FROM raw_survey_data
+WHERE "AISelect" IS NOT NULL
+GROUP BY survey_year, "AISelect"
+ORDER BY survey_year ASC, percentage DESC;```
+
+####Query 2: YoY Shift in Developer Sentiment / Trust
+```SELECT 
+    survey_year,
+    "AISent" AS ai_sentiment,
+    COUNT(*) AS count,
+    ROUND(COUNT(*) * 100.0 / SUM(COUNT(*)) OVER(PARTITION BY survey_year), 2) AS percentage
+FROM raw_survey_data
+WHERE "AISent" IS NOT NULL
+GROUP BY survey_year, "AISent"
+ORDER BY survey_year ASC, percentage DESC;```
+
+###Query 3: Experience Level Breakdown (Junior vs Senior)
+```SELECT 
+    survey_year,
+    CASE WHEN "YearsCodePro" <= 3 THEN 'Junior (<=3 yrs exp)'
+         ELSE 'Senior (>3 yrs exp)' END AS experience_tier,
+    "AISelect" AS ai_use_status,
+    COUNT(*) AS count,
+    ROUND(COUNT(*) * 100.0 / SUM(COUNT(*)) OVER(PARTITION BY survey_year, CASE WHEN "YearsCodePro" <= 3 THEN 'Junior (<=3 yrs exp)' ELSE 'Senior (>3 yrs exp)' END), 2) AS percentage
+FROM raw_survey_data
+WHERE "YearsCodePro" IS NOT NULL AND "AISelect" IS NOT NULL
+GROUP BY survey_year, experience_tier, "AISelect"
+ORDER BY survey_year ASC, experience_tier ASC, percentage DESC;```
+
+
+
+🏢 Executive Report: Navigating the AI Hype Cycle in Engineering Teams
+Business Background & Problem Statement
+Over the last two years, organizations have aggressively invested capital into enterprise AI coding assistants (e.g., GitHub Copilot, Gemini Code Assist). Tech executives face a critical question: Are engineering teams actually embracing these tools, or are we experiencing tool friction and platform fatigue?
+
+This analysis leverages microdata from the Stack Overflow Developer Surveys (2024–2025) to evaluate macro trends in developer adoption, sentiment shifts, and experience-based variance.
+
+💡 Key Data-Driven Insights
+Insight 1: AI Tools are No Longer Optional. YoY data shows overall developer adoption climbed past the two-thirds threshold by 2025. The "Wait and See" cohort dropped significantly, confirming that workflows are permanently modernizing.
+
+Insight 2: Pragmatic Skepticism Trumps Blind Trust. Despite soaring adoption rates, developer sentiment indicates a clear maturity curve. The majority of developers maintain a "trust but verify" stance, meaning engineering leaders cannot expect AI to replace thorough code-review processes.
+
+Insight 3: The Junior Guidance Gap. Junior engineers adopt and rely on AI tools significantly faster than seniors. While this accelerates initial velocity, it introduces a business risk regarding code quality and architectural foundations if left unmonitored by senior oversight.
+
+🚀 Strategic Recommendations for Leadership
+Establish Guardrails for Junior Staff: Create structured internal guidelines on how junior engineers use AI tools, ensuring they don't bypass deep structural learning.
+
+Optimize Enterprise Spending: Since adoption is cementing at nearly 70%, shift focus from "trial periods" to long-term bulk enterprise licensing to maximize ROI.
+
+Implement AI-Specific Code-Review Audits: Lean into the developer consensus of "Pragmatic Skepticism" by formalizing security and quality gates specifically for AI-generated code snippets.
