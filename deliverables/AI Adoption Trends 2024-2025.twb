@@ -1,0 +1,1828 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20262.26.0708.1337                               -->
+<workbook _.fcp.WorkbookFingerprinting.true...author-id='9ed46c700fcecd15453892218aa31c1270093ae2866f1131f5caaa7a88e4b040' _.fcp.WorkbookFingerprinting.true...creator-author-id='9ed46c700fcecd15453892218aa31c1270093ae2866f1131f5caaa7a88e4b040' _.fcp.WorkbookFingerprinting.true...creator-license-type='public' _.fcp.WorkbookFingerprinting.true...creator-machine-id='9ed46c700fcecd15453892218aa31c1270093ae2866f1131f5caaa7a88e4b040' _.fcp.WorkbookFingerprinting.true...license-type='public' _.fcp.WorkbookFingerprinting.true...machine-id='9ed46c700fcecd15453892218aa31c1270093ae2866f1131f5caaa7a88e4b040' original-version='18.1' source-build='2026.2.1 (20262.26.0708.1337)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+    <_.fcp.WorkbookFingerprinting.true...WorkbookFingerprinting />
+    <WorksheetBackgroundTransparency />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='AISelect_YoY_Simplified (aggregated_survey_results)' inline='true' name='federated.0n640dm0ukn58k1bcwucq0wf72bg' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='aggregated_survey_results' name='excel-direct.0816bxo0x6ps9l1capude0dbpqp9'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='D:/Priyanka_Vault/Stackoverflow_AI_Trends_V1/stackoverflow-ai-trends_V1/data/processed/aggregated_survey_results.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <relation connection='excel-direct.0816bxo0x6ps9l1capude0dbpqp9' name='Experience_Tier_Simplified' table='[Experience_Tier_Simplified$]' type='table'>
+          <columns gridOrigin='A1:E9:no:A1:E9:0' header='yes' outcome='6'>
+            <column datatype='integer' name='survey_year' ordinal='0' />
+            <column datatype='string' name='experience_tier' ordinal='1' />
+            <column datatype='string' name='ai_use_status' ordinal='2' />
+            <column datatype='integer' name='count' ordinal='3' />
+            <column datatype='real' name='percentage' ordinal='4' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Experience_Tier_Simplified]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:E9:no:A1:E9:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>survey_year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[survey_year]</local-name>
+            <parent-name>[Experience_Tier_Simplified]</parent-name>
+            <remote-alias>survey_year</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Experience!Tier!Simplified_44A398ED0D554D5796AFD4B88546148B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>experience_tier</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[experience_tier]</local-name>
+            <parent-name>[Experience_Tier_Simplified]</parent-name>
+            <remote-alias>experience_tier</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Experience!Tier!Simplified_44A398ED0D554D5796AFD4B88546148B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ai_use_status</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[ai_use_status]</local-name>
+            <parent-name>[Experience_Tier_Simplified]</parent-name>
+            <remote-alias>ai_use_status</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Experience!Tier!Simplified_44A398ED0D554D5796AFD4B88546148B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>count</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[count]</local-name>
+            <parent-name>[Experience_Tier_Simplified]</parent-name>
+            <remote-alias>count</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Experience!Tier!Simplified_44A398ED0D554D5796AFD4B88546148B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>percentage</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[percentage]</local-name>
+            <parent-name>[Experience_Tier_Simplified]</parent-name>
+            <remote-alias>percentage</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[Experience!Tier!Simplified_44A398ED0D554D5796AFD4B88546148B]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Experience_Tier_Simplified' datatype='table' name='[__tableau_internal_object_id__].[Experience!Tier!Simplified_44A398ED0D554D5796AFD4B88546148B]' role='measure' type='quantitative' />
+      <column caption='Ai Sentiment' datatype='string' name='[ai_sentiment]' role='dimension' type='nominal' />
+      <column caption='Ai Use Status' datatype='string' name='[ai_use_status]' role='dimension' type='nominal' />
+      <column caption='Count' datatype='integer' name='[count]' role='measure' type='quantitative' />
+      <column caption='Experience Tier' datatype='string' name='[experience_tier]' role='dimension' type='nominal' />
+      <column caption='Percentage' datatype='real' name='[percentage]' role='measure' type='quantitative' />
+      <column aggregation='Sum' caption='Survey Year' datatype='integer' name='[survey_year]' role='dimension' type='ordinal' />
+      <column-instance column='[ai_use_status]' derivation='None' name='[none:ai_use_status:nk]' pivot='key' type='nominal' />
+      <extract count='-1' enabled='true' object-id='' units='records' user-specific='false'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/priya/AppData/Local/Temp/TableauTemp/#TableauTemp_01ebwjs070t88z15e9b850umew38.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='07/26/2026 06:32:21 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>survey_year</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[survey_year]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>survey_year</remote-alias>
+              <ordinal>0</ordinal>
+              <family>Experience_Tier_Simplified</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Experience!Tier!Simplified_44A398ED0D554D5796AFD4B88546148B]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>experience_tier</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[experience_tier]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>experience_tier</remote-alias>
+              <ordinal>1</ordinal>
+              <family>Experience_Tier_Simplified</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <object-id>[Experience!Tier!Simplified_44A398ED0D554D5796AFD4B88546148B]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ai_use_status</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[ai_use_status]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>ai_use_status</remote-alias>
+              <ordinal>2</ordinal>
+              <family>Experience_Tier_Simplified</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <object-id>[Experience!Tier!Simplified_44A398ED0D554D5796AFD4B88546148B]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>count</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[count]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>count</remote-alias>
+              <ordinal>3</ordinal>
+              <family>Experience_Tier_Simplified</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>8</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Experience!Tier!Simplified_44A398ED0D554D5796AFD4B88546148B]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>percentage</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[percentage]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>percentage</remote-alias>
+              <ordinal>4</ordinal>
+              <family>Experience_Tier_Simplified</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>8</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Experience!Tier!Simplified_44A398ED0D554D5796AFD4B88546148B]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:ai_use_status:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;No&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Yes&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='Experience_Tier_Simplified' id='Experience!Tier!Simplified_44A398ED0D554D5796AFD4B88546148B'>
+            <properties context=''>
+              <relation connection='excel-direct.0816bxo0x6ps9l1capude0dbpqp9' name='Experience_Tier_Simplified' table='[Experience_Tier_Simplified$]' type='table'>
+                <columns gridOrigin='A1:E9:no:A1:E9:0' header='yes' outcome='6'>
+                  <column datatype='integer' name='survey_year' ordinal='0' />
+                  <column datatype='string' name='experience_tier' ordinal='1' />
+                  <column datatype='string' name='ai_use_status' ordinal='2' />
+                  <column datatype='integer' name='count' ordinal='3' />
+                  <column datatype='real' name='percentage' ordinal='4' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Guidance Gap'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontname='FontAwesome'>Guidance Gap</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='AISelect_YoY_Simplified (aggregated_survey_results)' name='federated.0n640dm0ukn58k1bcwucq0wf72bg' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0n640dm0ukn58k1bcwucq0wf72bg'>
+            <column caption='Ai Use Status' datatype='string' name='[ai_use_status]' role='dimension' type='nominal' />
+            <column caption='Experience Tier' datatype='string' name='[experience_tier]' role='dimension' type='nominal' />
+            <column-instance column='[ai_use_status]' derivation='None' name='[none:ai_use_status:nk]' pivot='key' type='nominal' />
+            <column-instance column='[experience_tier]' derivation='None' name='[none:experience_tier:nk]' pivot='key' type='nominal' />
+            <column-instance column='[survey_year]' derivation='None' name='[none:survey_year:ok]' pivot='key' type='ordinal' />
+            <column caption='Percentage' datatype='real' name='[percentage]' role='measure' type='quantitative' />
+            <column-instance column='[percentage]' derivation='Sum' name='[sum:percentage:qk]' pivot='key' type='quantitative' />
+            <column aggregation='Sum' caption='Survey Year' datatype='integer' name='[survey_year]' role='dimension' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:ai_use_status:nk]'>
+            <groupfilter function='member' level='[none:ai_use_status:nk]' member='&quot;Yes&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:ai_use_status:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:ai_use_status:nk]' value='108' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:experience_tier:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[sum:percentage:qk]</rows>
+        <cols>([federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:experience_tier:nk] / ([federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:survey_year:ok] / [federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:ai_use_status:nk]))</cols>
+        <mark-labels>
+          <mark-label id='0' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:experience_tier:nk]</field>
+                    <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:survey_year:ok]</field>
+                    <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:ai_use_status:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[sum:percentage:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:ai_use_status:nk]</field>
+                  <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:experience_tier:nk]</field>
+                  <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:survey_year:ok]</field>
+                  <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[sum:percentage:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;Yes&quot;</value>
+                <value>&quot;Junior (&lt;=3 yrs exp)&quot;</value>
+                <value>2024</value>
+                <value>70.840000000000003</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='1' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:experience_tier:nk]</field>
+                    <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:survey_year:ok]</field>
+                    <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:ai_use_status:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[sum:percentage:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:ai_use_status:nk]</field>
+                  <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:experience_tier:nk]</field>
+                  <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:survey_year:ok]</field>
+                  <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[sum:percentage:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;Yes&quot;</value>
+                <value>&quot;Junior (&lt;=3 yrs exp)&quot;</value>
+                <value>2025</value>
+                <value>83.870000000000005</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='2' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:experience_tier:nk]</field>
+                    <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:survey_year:ok]</field>
+                    <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:ai_use_status:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[sum:percentage:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:ai_use_status:nk]</field>
+                  <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:experience_tier:nk]</field>
+                  <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:survey_year:ok]</field>
+                  <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[sum:percentage:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;Yes&quot;</value>
+                <value>&quot;Senior (&gt;3 yrs exp)&quot;</value>
+                <value>2024</value>
+                <value>58.729999999999997</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='3' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:experience_tier:nk]</field>
+                    <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:survey_year:ok]</field>
+                    <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:ai_use_status:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[sum:percentage:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:ai_use_status:nk]</field>
+                  <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:experience_tier:nk]</field>
+                  <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:survey_year:ok]</field>
+                  <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[sum:percentage:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;Yes&quot;</value>
+                <value>&quot;Senior (&gt;3 yrs exp)&quot;</value>
+                <value>2025</value>
+                <value>78.230000000000004</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+        </mark-labels>
+      </table>
+      <simple-id uuid='{4DC0B012-83EA-4584-9F8E-B554F27BEFB0}' />
+    </worksheet>
+    <worksheet name='Trust Shift'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontname='FontAwesome'>Trust Shift</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='AISelect_YoY_Simplified (aggregated_survey_results)' name='federated.0n640dm0ukn58k1bcwucq0wf72bg' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0n640dm0ukn58k1bcwucq0wf72bg'>
+            <column caption='Ai Sentiment' datatype='string' name='[ai_sentiment]' role='dimension' type='nominal' />
+            <column caption='Ai Use Status' datatype='string' name='[ai_use_status]' role='dimension' type='nominal' />
+            <column-instance column='[ai_sentiment]' derivation='None' name='[none:ai_sentiment:nk]' pivot='key' type='nominal' />
+            <column-instance column='[ai_use_status]' derivation='None' name='[none:ai_use_status:nk]' pivot='key' type='nominal' />
+            <column-instance column='[survey_year]' derivation='None' name='[none:survey_year:ok]' pivot='key' type='ordinal' />
+            <column caption='Percentage' datatype='real' name='[percentage]' role='measure' type='quantitative' />
+            <column-instance column='[percentage]' derivation='Sum' name='[sum:percentage:qk]' pivot='key' type='quantitative' />
+            <column aggregation='Sum' caption='Survey Year' datatype='integer' name='[survey_year]' role='dimension' type='ordinal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.0n640dm0ukn58k1bcwucq0wf72bg].[sum:percentage:qk]' value='' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:survey_year:ok]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[sum:percentage:qk]</rows>
+        <cols>([federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:survey_year:ok] / [federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:ai_use_status:nk])</cols>
+        <mark-labels>
+          <mark-label id='0' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:ai_sentiment:nk]</field>
+                    <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:survey_year:ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[sum:percentage:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:ai_sentiment:nk]</field>
+                  <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:survey_year:ok]</field>
+                  <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[sum:percentage:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;Very favorable&quot;</value>
+                <value>2024</value>
+                <value>23.649999999999999</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='1' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:ai_sentiment:nk]</field>
+                    <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:survey_year:ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[sum:percentage:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:ai_sentiment:nk]</field>
+                  <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:survey_year:ok]</field>
+                  <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[sum:percentage:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;Very favorable&quot;</value>
+                <value>2025</value>
+                <value>22.940000000000001</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='2' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:ai_sentiment:nk]</field>
+                    <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:survey_year:ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[sum:percentage:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:ai_sentiment:nk]</field>
+                  <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:survey_year:ok]</field>
+                  <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[sum:percentage:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;Favorable&quot;</value>
+                <value>2024</value>
+                <value>48.32</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='3' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:ai_sentiment:nk]</field>
+                    <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:survey_year:ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[sum:percentage:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:ai_sentiment:nk]</field>
+                  <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:survey_year:ok]</field>
+                  <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[sum:percentage:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;Favorable&quot;</value>
+                <value>2025</value>
+                <value>36.789999999999999</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='4' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:ai_sentiment:nk]</field>
+                    <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:survey_year:ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[sum:percentage:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:ai_sentiment:nk]</field>
+                  <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:survey_year:ok]</field>
+                  <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[sum:percentage:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;Indifferent&quot;</value>
+                <value>2024</value>
+                <value>18.670000000000002</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='5' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:ai_sentiment:nk]</field>
+                    <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:survey_year:ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[sum:percentage:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:ai_sentiment:nk]</field>
+                  <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:survey_year:ok]</field>
+                  <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[sum:percentage:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;Indifferent&quot;</value>
+                <value>2025</value>
+                <value>17.57</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='6' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:ai_sentiment:nk]</field>
+                    <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:survey_year:ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[sum:percentage:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:ai_sentiment:nk]</field>
+                  <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:survey_year:ok]</field>
+                  <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[sum:percentage:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;Unfavorable&quot;</value>
+                <value>2024</value>
+                <value>5.1900000000000004</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='7' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:ai_sentiment:nk]</field>
+                    <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:survey_year:ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[sum:percentage:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:ai_sentiment:nk]</field>
+                  <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:survey_year:ok]</field>
+                  <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[sum:percentage:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;Unfavorable&quot;</value>
+                <value>2025</value>
+                <value>10.82</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='8' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:ai_sentiment:nk]</field>
+                    <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:survey_year:ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[sum:percentage:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:ai_sentiment:nk]</field>
+                  <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:survey_year:ok]</field>
+                  <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[sum:percentage:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;Very unfavorable&quot;</value>
+                <value>2024</value>
+                <value>1.21</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='9' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:ai_sentiment:nk]</field>
+                    <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:survey_year:ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[sum:percentage:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:ai_sentiment:nk]</field>
+                  <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:survey_year:ok]</field>
+                  <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[sum:percentage:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;Very unfavorable&quot;</value>
+                <value>2025</value>
+                <value>9.6199999999999992</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='10' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:ai_sentiment:nk]</field>
+                    <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:survey_year:ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[sum:percentage:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:ai_sentiment:nk]</field>
+                  <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:survey_year:ok]</field>
+                  <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[sum:percentage:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;Unsure&quot;</value>
+                <value>2024</value>
+                <value>2.96</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='11' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:ai_sentiment:nk]</field>
+                    <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:survey_year:ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[sum:percentage:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:ai_sentiment:nk]</field>
+                  <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:survey_year:ok]</field>
+                  <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[sum:percentage:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;Unsure&quot;</value>
+                <value>2025</value>
+                <value>2.27</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='12' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:survey_year:ok]</field>
+                    <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:ai_use_status:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[sum:percentage:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:ai_use_status:nk]</field>
+                  <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:survey_year:ok]</field>
+                  <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[sum:percentage:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;No&quot;</value>
+                <value>2024</value>
+                <value>70.430000000000007</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='13' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:survey_year:ok]</field>
+                    <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:ai_use_status:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[sum:percentage:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:ai_use_status:nk]</field>
+                  <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:survey_year:ok]</field>
+                  <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[sum:percentage:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;Yes&quot;</value>
+                <value>2024</value>
+                <value>129.56999999999999</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='14' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:survey_year:ok]</field>
+                    <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:ai_use_status:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[sum:percentage:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:ai_use_status:nk]</field>
+                  <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:survey_year:ok]</field>
+                  <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[sum:percentage:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;No&quot;</value>
+                <value>2025</value>
+                <value>37.899999999999999</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='15' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:survey_year:ok]</field>
+                    <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:ai_use_status:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[sum:percentage:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:ai_use_status:nk]</field>
+                  <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:survey_year:ok]</field>
+                  <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[sum:percentage:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;Yes&quot;</value>
+                <value>2025</value>
+                <value>162.10000000000002</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+        </mark-labels>
+      </table>
+      <simple-id uuid='{0A16263C-3CB0-4453-921E-2343B25B69DC}' />
+    </worksheet>
+    <worksheet name='YoY Adoption'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontname='FontAwesome'>YoY Adoption</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='AISelect_YoY_Simplified (aggregated_survey_results)' name='federated.0n640dm0ukn58k1bcwucq0wf72bg' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0n640dm0ukn58k1bcwucq0wf72bg'>
+            <column caption='Ai Use Status' datatype='string' name='[ai_use_status]' role='dimension' type='nominal' />
+            <column-instance column='[ai_use_status]' derivation='None' name='[none:ai_use_status:nk]' pivot='key' type='nominal' />
+            <column-instance column='[survey_year]' derivation='None' name='[none:survey_year:ok]' pivot='key' type='ordinal' />
+            <column caption='Percentage' datatype='real' name='[percentage]' role='measure' type='quantitative' />
+            <column-instance column='[percentage]' derivation='Sum' name='[sum:percentage:qk]' pivot='key' type='quantitative' />
+            <column aggregation='Sum' caption='Survey Year' datatype='integer' name='[survey_year]' role='dimension' type='ordinal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:ai_use_status:nk]' value='68' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:ai_use_status:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[sum:percentage:qk]</rows>
+        <cols>([federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:survey_year:ok] / [federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:ai_use_status:nk])</cols>
+        <mark-labels>
+          <mark-label id='0' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:survey_year:ok]</field>
+                    <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:ai_use_status:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[sum:percentage:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:ai_use_status:nk]</field>
+                  <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:survey_year:ok]</field>
+                  <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[sum:percentage:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;Yes&quot;</value>
+                <value>2024</value>
+                <value>61.840000000000003</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='1' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:survey_year:ok]</field>
+                    <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:ai_use_status:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[sum:percentage:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:ai_use_status:nk]</field>
+                  <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:survey_year:ok]</field>
+                  <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[sum:percentage:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;Yes&quot;</value>
+                <value>2025</value>
+                <value>78.5</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='2' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:survey_year:ok]</field>
+                    <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:ai_use_status:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[sum:percentage:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:ai_use_status:nk]</field>
+                  <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:survey_year:ok]</field>
+                  <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[sum:percentage:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;No&quot;</value>
+                <value>2025</value>
+                <value>21.5</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='3' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:survey_year:ok]</field>
+                    <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:ai_use_status:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[sum:percentage:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:ai_use_status:nk]</field>
+                  <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:survey_year:ok]</field>
+                  <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[sum:percentage:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;No&quot;</value>
+                <value>2024</value>
+                <value>38.159999999999997</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+        </mark-labels>
+      </table>
+      <simple-id uuid='{1DFDA619-62E5-4C20-9D54-D1A39C4CC761}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='AI Adoption Trends 2024-2025'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor='#000000' fontname='FontAwesome'>State of AI Adoption: 2024 vs 2025 Developer Survey</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <style />
+      <size maxheight='1200' maxwidth='1600' minheight='1200' minwidth='1600' sizing-mode='fixed' />
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98666' id='16' param='vert' type-v2='layout-flow' w='99000' x='500' y='667'>
+            <zone h='3084' id='17' type-v2='title' w='99000' x='500' y='667'>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+            <zone h='95582' id='14' param='vert' type-v2='layout-flow' w='99000' x='500' y='3751'>
+              <zone h='95582' id='7' param='horz' type-v2='layout-flow' w='99000' x='500' y='3751'>
+                <zone h='95582' id='5' type-v2='layout-basic' w='46375' x='500' y='3751' />
+                <zone fixed-size='842' h='95582' id='6' is-fixed='true' param='vert' type-v2='layout-flow' w='52625' x='46875' y='3751' />
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone h='24917' id='3' name='YoY Adoption' w='42750' x='563' y='7583' />
+        <zone fixed-size='108' h='4833' id='8' is-fixed='true' name='YoY Adoption' pane-specification-id='0' param='[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:ai_use_status:nk]' type-v2='color' w='8750' x='375' y='33167' />
+        <zone fixed-size='300' h='25583' id='9' is-fixed='true' name='Trust Shift' w='42438' x='51188' y='8500'>
+          <layout-cache cell-count-w='4' minheight='205' non-cell-size-w='60' type-h='scalable' type-w='cell' />
+        </zone>
+        <zone h='24917' id='11' name='Guidance Gap' w='47188' x='22250' y='40083'>
+          <layout-cache cell-count-w='4' minheight='225' non-cell-size-w='60' type-h='scalable' type-w='cell' />
+        </zone>
+        <zone h='4833' id='12' name='Guidance Gap' pane-specification-id='0' param='[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:experience_tier:nk]' type-v2='color' w='8750' x='25500' y='65833' />
+        <zone fixed-size='176' h='4833' id='10' is-fixed='true' name='Trust Shift' pane-specification-id='0' param='[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:survey_year:ok]' type-v2='color' w='8750' x='51500' y='34833' />
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <layout-options>
+            <title>
+              <formatted-text>
+                <run fontcolor='#000000' fontname='FontAwesome'>State of AI Adoption: 2024 vs 2025 Developer Survey</run>
+              </formatted-text>
+            </title>
+          </layout-options>
+          <size maxheight='1150' minheight='1150' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='19' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98666' id='18' param='vert' type-v2='layout-flow' w='99000' x='500' y='667'>
+                <zone h='3084' id='17' type-v2='title' w='99000' x='500' y='667'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='24917' id='3' is-fixed='true' name='YoY Adoption' w='42750' x='563' y='7583'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='108' h='4833' id='8' name='YoY Adoption' pane-specification-id='0' param='[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:ai_use_status:nk]' type-v2='color' w='8750' x='375' y='33167'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='25583' id='9' is-fixed='true' name='Trust Shift' w='42438' x='51188' y='8500'>
+                  <layout-cache cell-count-w='4' minheight='205' non-cell-size-w='60' type-h='scalable' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='176' h='4833' id='10' name='Trust Shift' pane-specification-id='0' param='[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:survey_year:ok]' type-v2='color' w='8750' x='51500' y='34833'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='24917' id='11' is-fixed='true' name='Guidance Gap' w='47188' x='22250' y='40083'>
+                  <layout-cache cell-count-w='4' minheight='225' non-cell-size-w='60' type-h='scalable' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='4833' id='12' name='Guidance Gap' pane-specification-id='0' param='[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:experience_tier:nk]' type-v2='color' w='8750' x='25500' y='65833'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{1C2B4A69-2E1F-4CAB-93B1-3A0583808E58}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='worksheet' name='YoY Adoption'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:ai_use_status:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{324E613F-CC9E-4EBC-B3E0-FD1F000B45FE}' />
+    </window>
+    <window class='worksheet' name='Trust Shift'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:survey_year:ok]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:ai_use_status:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{C0BDDD7E-E4C0-435B-9026-4E9AAFCFA297}' />
+    </window>
+    <window class='worksheet' name='Guidance Gap'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:experience_tier:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{56669AEB-15BA-4180-9EFF-1B8BD00AC8EA}' />
+    </window>
+    <window class='dashboard' maximized='true' name='AI Adoption Trends 2024-2025'>
+      <viewpoints>
+        <viewpoint name='Guidance Gap'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Trust Shift'>
+          <zoom type='entire-view' />
+          <highlight field='[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:survey_year:ok]'>
+            <bucket-selection />
+          </highlight>
+        </viewpoint>
+        <viewpoint name='YoY Adoption'>
+          <zoom type='entire-view' />
+          <highlight field='[federated.0n640dm0ukn58k1bcwucq0wf72bg].[none:ai_use_status:nk]'>
+            <bucket-selection />
+          </highlight>
+        </viewpoint>
+      </viewpoints>
+      <active id='5' />
+      <device-preview visible='true' />
+      <simple-id uuid='{7AFA9C56-A71D-4F45-8A9E-C410E56C9291}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='AI Adoption Trends 2024-2025' width='192'>
+      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
+      AABJRU5ErkJggg==
+    </thumbnail>
+    <thumbnail height='192' name='Guidance Gap' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='Trust Shift' width='192'>
+      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
+      ZLu7n8mP/ul1VtayV8bxe0/s4qlHtmWtvTspSXZDoKrahvUo4wGIr8zQe+UKV8cWCIWi1G5v
+      ItjfzorpRUmG0cpaKCovwdl7ktOhXCKJHA7n3duFsdK6QVrP3t7KMOTWiM8q84WxCirYd7CC
+      fQdvmFj2NVKJJKZqw263oQCHn/w6yVQau9MpX06IrNmk62kqdqdrwxRF1XA65fq2yC7Z2ApL
+      kwAIS5MACEuTAAhLkwAIS5MACEuTAAhLkwAIS5MACEuTAAhLkwAIS5MACEuTAAhLkwAIS5MA
+      CEuTAAhLkwAIS5MACEvLfGU4QyccDDA0vUpLcwNOu0pkeZqR0SlCaTt1DduoLHIxM3iJnrEV
+      arftpqG6GPt9VBlO3L0yvgfQo0HGxq4yMhUgnVqv97OyvEpZ44Mc3OVnuGeY5Noo/QseHn38
+      MNHJfuaD2SspIqwt85XhPAW0PNhK4sIVPtymVzW0YBop5kZmwFdCfGqC/MaDeOx2Kn25BOJh
+      qu7lynBZrlJiGMa9Mzab7OaxynxlOFVF46PDGQUw9RhXOttZdFbSuqMKfWgKu10BBVRVJ5Fa
+      r6lzc2U4+Wmgf8m9OzbZ7/XGscp+ZThguLuDROlOHtlSDEAyXyMwtV4ZbjmSIv9fqAxnt9uz
+      3d3PJsunL6qq3Ttjc5ME2a8Md+NYZaky3CDD44FrleG2MzHYxaQxz2CnQm5RE498cSfevlOc
+      DnuJpnw8nH9vV4YT945NqQy39ds/+9j7HvrKV0mldGxOh1ybFVlz1/zSgqJqOKQynMgy2dgK
+      S5MACEuTAAhLkwAIS5MACEuTAAhLkwAIS5MACEuTAAhLkwAIS5MACEuTAAhLkwAIS5MACEuT
+      AAhLkwAIS5MACEv7//zT3idw6zpvAAAAAElFTkSuQmCC
+    </thumbnail>
+    <thumbnail height='192' name='YoY Adoption' width='192'>
+      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
+      /XbYdj8sJzaGnG0CBau2c7zMTWvL8uXJwSGMkJOO9m7K6huJz8co274ft68MX+cHJIw6PBgr
+      JzeZpkkmk8nV8B5JhmFgGMbmqVsevoHPZrMoq+qTswCoqoayaqavorgoLApRrC7R23yHEr+C
+      WwEUMA0DC9Z8xyt97h/e5vt9gPXvBnhvfXIWACObIZPJkM1CJmsQKA4wm3VRVOlmpD+K7tOZ
+      m5ilrDRK3FWDRwN11RaZoigrbT7Eg1FVFcuyNk/d8tANU9M01FX1yVkA5icGGJqawzAUBsIu
+      tmzfz0J7By2TFuV79lPtzdDa2smtKZXHHj8kX0eJvMjZ+664ZgfFNWuv23Po6PKmDgqK4uHA
+      kSeW/7ABfpJJ2NO6fvAqirJmrbcRfotM2Ntm2VsSIickAMLWJADC1iQAwtYkAMLWJADC1iQA
+      wtYkAMLWJADC1iQAwtYkAMLWJADC1iQAwtYkAMLWJADC1nI6H8A00qQNDbdTwzQyLMZiZE1w
+      egP4XRqJpSjxrE6owIcqcwNEHuQsAPHZMNdamvGVPMHRx8qIzg7R2jpFsNhHYWUDir5Ay50h
+      XGqWybrD7K7y5WOKqLC5nG0CKbqfw8f2oSSXO/6konMUNx7gwIEDbCnzMz8+SNnOJ3j82CFi
+      3XdIbcge1eJRl7M1gCdYSDr9cd9HDZWuprcZ7HBTv+cY3oyC26uD4kdllpQBOtmVH0YzDINk
+      Mpmr4T2SMpnM5qpbHvoCpVIplFX1Wbc5waGtB3mh4TCkJ3n/wyFqik0y8QyWM0HGCuLUQF/V
+      rV3TtM/kF0DsJJ1Oo6rqpqlbJg/7fS6XC3VVfXIWgOmhDnpGBwmHdbyF4DfH6BuLo2UX8dYe
+      piTk5cr1D5hyp/BuO77cJEuIdZazAJRu2UPplj2rrqmgqj6DqWg4dA2FMk7/1RaylorDockO
+      sMiLdWyLoqA7nGuuUXUHzj9xayHWgxwIE7YmARC2JgEQtiYBELYmARC2JgEQtiYBELYmARC2
+      JgEQtiYBELYmARC2JgEQtiYBELYmARC2JgEQtpbTABiZOLF4ZuWyZZnMRyIkDRMsg2hkjKGx
+      GQxTZsSL/MhZABanB3n/0jt09M7evcYiOT/Cu69fZCKVITY9Qkf/JKnpblqHFpAIiHzI2Yww
+      h7eYo8f3cadtucuDmV6i/c44W7aUYWKxMDVKWeNxthWmuPZ+O8mtR3HfEwMrD10DHgVSt0+2
+      uj45C4DLF0BJz320SMYHugjU7kTrawPAzCq43BooXhRrjnQWHIqxpi1KKpXK1fAeSR+1Rdk0
+      dctXW5RV9VmfOcHZRUaGxhhLhIkOj+C3XOwrMFGiKSzHEimrBJcubVH+UtIW5dOtc1uUMJOT
+      Kt7CvRz56+fRMRm61oS6bz9FiUmu3rzMtJ6lZNcxXNIWQuTBOrZFAVDZ8sTR5f966nj2VBWG
+      paDr0hZF5Mc6tkW5n6rpciBC5JW8/4StSQCErUkAhK1JAIStSQCErUkAhK1JAIStSQCErUkA
+      hK1JAIStSQByLJvN0tnZiWEYWJZFf38/Z86cYXh4GNM06ezs5Ic//CHz8/Nr7pdIJHjllVf4
+      5S9/STqdztPoH315PRfoUTc7O8vZs2dJpVLU19czNzdHT08PL7zwAufOnaOhoYFwOMxXvvIV
+      Xn75ZV566SWCwSCWZXHmzBlOnjxJZWUlSh5OG7YLWQPkUDAY5Gtf+xrV1dUAVFRUcPr0aSKR
+      yMqspKKiIoLBIEVFRStrgXg8zsTEBJFIhO7ubglADskaIId0XV8z/c6yLFpbW7l27Rpf+tKX
+      8Pv9/OY3v+Hb3/72mvsZhoGqqmiaRm9vL6ZpcvTo0fUevi1IANbR+Pg4TU1NfP3rX0fXl0v/
+      4osvYpomP/vZzwgEAgB4PB4CgQB79+4lEAgwNTWVz2E/0nIaACMVI5p2Egq4yKYWGQ2Pk9F8
+      1NVW4lQNImNDTCbc7NxWha4+eqv5yclJ/vCHPzA1NcXrr79OQ0MDAwMDfPOb36SgoIAvf/nL
+      XL58mfn5eU6dOoXH4+HChQucPn2aZ555hrNnz6KqKl/96lfz/VQeWYqVoxYC0Yk+rnd14is4
+      wvGDFcxPDLOoeHEmR+icLmJ/VYruSZNa/yJhYwtHdpWu2SEZHh6mrq4uF0PbUD76dkjTtPu2
+      9Q3DQFEUVPXBdtWi0SiGYRAKhXIx1M9c7HsnILmwrsv0/e0bqKGtACiKouRsDeAprOTJ4zod
+      rcv5KiirwZVYYjEJuqYRnZmirP5JqgoyjL7fTHJnKR6slW1my7JWOkQ8yhRFQVEULMu6r53J
+      R4F40Dp89Bh2qNufyzRNWFWf3PUFcnux0h9/ollGmvHBTnpH5qjb3wBTKk6XBoqGYsXIGOBS
+      zJUXz7Isstlsrob3SDIMA8MwNk/d8tAWxTAMzFX1WaedYBNTcVK/5yj1u2Jcfq+T0kqL+FyC
+      Ki1KnHLcGmiKhqZpAKiqitPpXJ/hfQYW/+mvsZam13WZ3r85i1ayY+WyrusoirJp6pbKw9e7
+      DocDdVV9ctoWpXdsnNlZlY5eE3cqzFAkjWqkKG44RE0ow41b17nUY1C77zjOzb4PbGSW/60n
+      6QD3F1vHtihVbMkaWIqKpqkowMmnSzEsZeWyEOttHY8DKGj62sUpqiYHIkReyakQwtYkAMLW
+      JADC1iQAwtYkAMLWJADC1iQAwtYkAMLWJADC1iQAwtYkAMLWJADC1iQAwtYkAMLWJADC1iQA
+      wtZyNh8lvTRLd28nhmcXB3YUE50coHs4QtY0KavdTXUwQ9vtFqIZne0HnqA25MrVUIT4k3IW
+      gFQ8gbfET2R8ubOx7ilg574avNY0V5rHcRYv4NlylIPFMa409VF+Ys/mnxcsNp2cBSBQWo0r
+      bTA7vnzZGwiRTka51dRFecMRjIlpgjV+NI8Pl9FB0tiDSnalLYphGCSTyVwN7zOXo/5inyid
+      TqOsqlEmk9lcdctDzVKp1JqarduU3GRsiptNndQfPkFF0MnIlIWRtYA0huFAVUFXPx6Opmm4
+      3e71Gt5fLKsorPfL6XQ60VbVKJ1Oo6rqpqlbJg9tUVwuF+qq+uQsANHIKGORESYndUYn3Cz0
+      XCJiVePubSMWqqawuIjO1mZSgThW5U58sjsu8iBnAXB6/JSUNFJYCB6fm+DeEwTiGRTA5fUS
+      Cjay1zFDylCoKyuVtigiL3IWALevALdv9TUeAkVrb1NSXpmrxQvxQGTDQ9iaBEDYmgRA2JoE
+      QNiaBEDYmgRA2JoEQNiaBEDYmgRA2JoEQNiaBEDYmgRA2JoEQNiaBEDYmgRA2FpOA2BZJoZp
+      rb1smMtTBy0LI5smlc7mZT6tEJDDCTHJhUlud9xGLzjE4T2lpJdmuN3SiuWr58j+LaSiUzS3
+      dJAxFKr2HqehdHPMYxWPlpytAQxDpX7XVqx4FgAza1Hb2IiWSQEwOzZA0Y4nOXFiP1OdXaRk
+      JSDyIGdrAF9RKY50guG7l90FJRSnZhhnCYBM0sAXcKM6XDjMm6QM0KQtykORtigPL29tUe6l
+      aCbptInlSZE1PWjSFuWhSVuUh7dubVFmx3oZnBhkeFinsFSj2JNgYCTM0FAMb5GfopIybjdd
+      Yd6XQKs7iFe+jxJ5kLMABEtr2R2qYudO0B1ONMVkd6CUnbtA0x04HeU8FawkY6r4/D5piyLy
+      ImcB0B0udMe91znXXPb6g7lavBAPRDY8hK1JAIStSQCErUkAhK1JAIStSQCErUkAhK1JAISt
+      SQCErUkAhK1JAISt/X8LhOIXT2MHsAAAAABJRU5ErkJggg==
+    </thumbnail>
+  </thumbnails>
+</workbook>

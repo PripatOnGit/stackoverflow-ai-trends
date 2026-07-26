@@ -105,10 +105,4 @@ Implement AI-Specific Code-Review Audits: Lean into the developer consensus of "
 ### 📈 Executive Data Storytelling
 The following visualizations illustrate the macro shifts in developer behavior over the last two years, highlighting the definitive transition from experimental tool-testing to normalized production workflows.
 
-#### 1. Overall YoY AI Tool Adoption Rate
-![YoY AI Adoption Rate](visuals/adoption_trends.png)
-*Figure 1.1: Aggressive growth in the adoption cohort ('Yes') with a corresponding sharp contraction in the undecided or resistant populations between 2024 and 2025.*
-
-#### 2. Shifting Trust Mechanics
-![Developer Sentiment and Trust](visuals/trust_sentiment.png)
-*Figure 1.2: Despite high usage, the sentiment data shows a clear stabilization in trust levels, underscoring a disciplined, 'trust-but-verify' engineering culture.*
+#Tableau Notebook Link: https://public.tableau.com/app/profile/priyanka.patil2211/viz/AIAdoptionTrends2024-2025/AIAdoptionTrends2024-2025?showOnboarding=true
