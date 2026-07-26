@@ -97,3 +97,18 @@ Establish Guardrails for Junior Staff: Create structured internal guidelines on 
 Optimize Enterprise Spending: Since adoption is cementing at nearly 70%, shift focus from "trial periods" to long-term bulk enterprise licensing to maximize ROI.
 
 Implement AI-Specific Code-Review Audits: Lean into the developer consensus of "Pragmatic Skepticism" by formalizing security and quality gates specifically for AI-generated code snippets.
+
+
+
+## 🔄 Project Phase: 5. SHARE (Data Visualizations)
+
+### 📈 Executive Data Storytelling
+The following visualizations illustrate the macro shifts in developer behavior over the last two years, highlighting the definitive transition from experimental tool-testing to normalized production workflows.
+
+#### 1. Overall YoY AI Tool Adoption Rate
+![YoY AI Adoption Rate](visuals/adoption_trends.png)
+*Figure 1.1: Aggressive growth in the adoption cohort ('Yes') with a corresponding sharp contraction in the undecided or resistant populations between 2024 and 2025.*
+
+#### 2. Shifting Trust Mechanics
+![Developer Sentiment and Trust](visuals/trust_sentiment.png)
+*Figure 1.2: Despite high usage, the sentiment data shows a clear stabilization in trust levels, underscoring a disciplined, 'trust-but-verify' engineering culture.*
