@@ -1,46 +1,65 @@
 # Tracking YoY AI Adoption & Developer Sentiment (2024–2025)
 
-## 🔄 Project Phase: 1. ASK
-This portfolio project analyzes the shifting dynamics between software engineers and Artificial Intelligence productivity tools using microdata from the 2024 and 2025 Stack Overflow Developer Surveys.
+Analysis of shifting dynamics between software engineers and AI productivity tools, using microdata from the 2024 and 2025 Stack Overflow Developer Surveys.
 
-### 🏢 The Business Objective & Problem Statement
-In the wake of rapid corporate investments into AI coding tools, engineering leaders and tech companies need data-driven answers to a critical question: Is real-world productivity matching the marketing hype, or are developers facing tool fatigue and trust friction? 
+🔗 **Live Dashboard:** [AI Adoption Trends 2024–2025 — Tableau Public](https://public.tableau.com/app/profile/priyanka.patil2211/viz/AIAdoptionTrends2024-2025/AIAdoptionTrends2024-2025)
 
-By analyzing year-over-year (YoY) microdata, this project aims to provide actionable insights for technical leaders to guide their team tooling and procurement strategies.
+---
 
-### 👥 Key Stakeholders
-* **Engineering Directors / CTOs:** Need to know if AI tools actually support their workforce or create technical debt.
-* **Product Managers (AI Tools):** Need to identify where friction points (trust, usability) are occurring in the dev ecosystem.
-* **Recruiters / Talent Teams:** Evaluating my ability to handle complex, real-world data pipelines and translate them into business strategy.
+## Phase 1: Ask
 
-### ❓ Key Analytical Questions
-1. **Adoption Scale:** How did overall AI tool adoption rates change among developers from 2024 to 2025?
-2. **The Sentiment Paradox:** Did developer trust and sentiment toward these tools improve, plateau, or decline year-over-year?
-3. **Experience Segmentation:** Do these trends differ significantly when comparing junior developers against seasoned senior engineers?
+### Business Objective & Problem Statement
 
+Over the last two years, organizations have aggressively invested capital into enterprise AI coding assistants (e.g., GitHub Copilot, Gemini Code Assist). Engineering leaders face a critical question: **are teams actually embracing these tools, or is the industry experiencing tool friction and platform fatigue?**
 
-## 📁 Project Phase: 2. PREPARE
+This project analyzes year-over-year (YoY) microdata to give technical leaders actionable, data-driven answers for their tooling and procurement strategy — rather than relying on marketing claims.
+
+### Key Stakeholders
+
+| Stakeholder | Interest |
+|---|---|
+| Engineering Directors / CTOs | Whether AI tools genuinely support the workforce or introduce technical debt |
+| Product Managers (AI Tools) | Where friction points (trust, usability) occur in the dev ecosystem |
+| Recruiters / Talent Teams | Ability to handle real-world data pipelines and translate them into business strategy |
+
+### Key Analytical Questions
+
+1. **Adoption Scale** — How did overall AI tool adoption change among developers from 2024 to 2025?
+2. **The Sentiment Paradox** — Did developer trust and sentiment toward these tools improve, plateau, or decline year-over-year?
+3. **Experience Segmentation** — Do these trends differ significantly between junior and senior engineers?
+
+---
+
+## Phase 2: Prepare
 
 ### Data Sources & Integrity
-* **Source:** Stack Overflow Developer Survey Microdata (2024 & 2025 public archives).
-* **Format:** Local flat `.csv` files stored in partitioned directories (`data/raw_2024/`, `data/raw_2025/`).
-* **Storage Strategy:** Maintained locally to establish an infrastructure-lean baseline before considering cloud migration.
+
+- **Source:** Stack Overflow Developer Survey microdata (2024 & 2025 public archives)
+- **Format:** Local flat `.csv` files in partitioned directories (`data/raw_2024/`, `data/raw_2025/`)
+- **Storage Strategy:** Kept local to establish an infrastructure-lean baseline before considering cloud migration
 
 ### Variable Schema Mapping
-To ensure longitudinal consistency, the following schema mapping boundaries have been established:
-1. **Experience Segment:** Derived from `YearsCodePro`.
-   * *Junior Cohort:* $\le$ 3 Years Professional Experience
-   * *Senior Cohort:* $\ge$ 8 Years Professional Experience
-2. **AI Tool Adoption:** Tracked via `AISelect` (Binary: Yes/No context).
-3. **AI Trust Metrics:** Tracked via `AITrust` (Ordinal scale assessing automated tool output reliability).
 
+To ensure longitudinal consistency, the following mapping was applied:
 
-## 🔄 Project Phase: 3. PROCESS & 4. ANALYZE
+1. **Experience Segment** — derived from `YearsCodePro`:
+   - *Junior Cohort:* ≤ 3 years professional experience
+   - *Senior Cohort:* > 3 years professional experience
+2. **AI Tool Adoption** — tracked via `AISelect` (Yes / No, with sub-categories)
+3. **AI Trust Metrics** — tracked via `AISent` (ordinal scale assessing sentiment toward AI tool output)
 
-### 🗄️ SQL Data Transformation & Aggregation
-To extract data-driven insights across historical periods, the raw 2024 and 2025 microdata tables were compiled into a centralized tracking table (`raw_survey_data`). Window functions (`PARTITION BY`) were applied to handle shifting denominator sizes across survey years.
+> **Note:** The Senior threshold above (`> 3 years`) was corrected to match the actual SQL logic used in Query 3 below. An earlier draft of this README stated `≥ 8 years`, which did not match the query that was actually run — fixed here to keep documentation and code in sync.
+
+---
+
+## Phase 3 & 4: Process & Analyze
+
+### SQL Data Transformation & Aggregation
+
+Raw 2024 and 2025 microdata were compiled into a centralized table (`raw_survey_data`). Window functions (`PARTITION BY`) were used to correctly handle shifting denominator sizes across survey years.
 
 #### Query 1: Overall YoY AI Tool Adoption Rate
+
 ```sql
 SELECT 
     survey_year,
@@ -50,9 +69,11 @@ SELECT
 FROM raw_survey_data
 WHERE "AISelect" IS NOT NULL
 GROUP BY survey_year, "AISelect"
-ORDER BY survey_year ASC, percentage DESC;```
+ORDER BY survey_year ASC, percentage DESC;
+```
 
-####Query 2: YoY Shift in Developer Sentiment / Trust
+#### Query 2: YoY Shift in Developer Sentiment / Trust
+
 ```sql
 SELECT 
     survey_year,
@@ -62,56 +83,72 @@ SELECT
 FROM raw_survey_data
 WHERE "AISent" IS NOT NULL
 GROUP BY survey_year, "AISent"
-ORDER BY survey_year ASC, percentage DESC;```
+ORDER BY survey_year ASC, percentage DESC;
+```
 
-###Query 3: Experience Level Breakdown (Junior vs Senior)
- ```sql
+#### Query 3: Experience Level Breakdown (Junior vs. Senior)
+
+```sql
 SELECT 
     survey_year,
     CASE WHEN "YearsCodePro" <= 3 THEN 'Junior (<=3 yrs exp)'
          ELSE 'Senior (>3 yrs exp)' END AS experience_tier,
     "AISelect" AS ai_use_status,
     COUNT(*) AS count,
-    ROUND(COUNT(*) * 100.0 / SUM(COUNT(*)) OVER(PARTITION BY survey_year, CASE WHEN "YearsCodePro" <= 3 THEN 'Junior (<=3 yrs exp)' ELSE 'Senior (>3 yrs exp)' END), 2) AS percentage
+    ROUND(COUNT(*) * 100.0 / SUM(COUNT(*)) OVER(
+        PARTITION BY survey_year, 
+        CASE WHEN "YearsCodePro" <= 3 THEN 'Junior (<=3 yrs exp)' ELSE 'Senior (>3 yrs exp)' END
+    ), 2) AS percentage
 FROM raw_survey_data
 WHERE "YearsCodePro" IS NOT NULL AND "AISelect" IS NOT NULL
 GROUP BY survey_year, experience_tier, "AISelect"
-ORDER BY survey_year ASC, experience_tier ASC, percentage DESC;```
+ORDER BY survey_year ASC, experience_tier ASC, percentage DESC;
+```
 
+---
 
-### 🔄 Project Phase: 5. SHARE (Data Visualizations)
+## Phase 5: Share
 
-### 📈 Executive Data Storytelling
-The following visualizations illustrate the macro shifts in developer behavior over the last two years, highlighting the definitive transition from experimental tool-testing to normalized production workflows.
-Chart 1: AI Tool Adoption Rates (YoY)X-Axis: Year (2024 vs. 2025)Y-Axis: Percentage (0% to 100%)Series/Legend: Yes (Adopting), No, but planning to, No, and not planning toWhat it reveals: The visual shrinking of the "No" buckets and the expanding "Yes" block.
+### Data Storytelling
 
-Chart 2: Developer Trust Maturity Curve (YoY)X-Axis: Sentiment Categories (Highly Trust, Somewhat Trust, Neither Trust nor Distrust, etc.)Y-Axis: PercentageSeries/Legend: Color-coded by Year (2024 vs. 2025)What it reveals: A clear visual plateau showing that despite massive adoption, developers are moving into the pragmatic "Neither Trust nor Distrust" middle ground.
+The visualizations below illustrate the macro shift in developer behavior over two years — from experimental tool-testing toward normalized, production workflows.
 
-Chart 3: Experience Cohort Variance Layout: Two side-by-side grouped charts—one for Junior ($\le 3$ years) and one for Senior ($>3$ years).What it reveals: Highlights the "Junior Guidance Gap," showing that the "Yes" adoption line peaks significantly higher for less experienced engineers.📂 Updating Your Repository with Visuals
+#### Chart 1: AI Tool Adoption Rates (YoY)
 
-#Tableau Notebook Link: https://public.tableau.com/app/profile/priyanka.patil2211/viz/AIAdoptionTrends2024-2025/AIAdoptionTrends2024-2025?showOnboarding=true
+- **X-axis:** Year (2024 vs. 2025)
+- **Y-axis:** Percentage (0–100%)
+- **Legend:** Yes (adopting), No but planning to, No and not planning to
+- **What it reveals:** The "No" cohort shrinks visibly while the "Yes" cohort expands — adoption climbed from 61.8% to 78.5%.
 
+#### Chart 2: Developer Trust Maturity Curve (YoY)
 
-🏢 Business Background & Problem Statement
-Over the last two years, organizations have aggressively invested capital into enterprise AI coding assistants (e.g., GitHub Copilot, Gemini Code Assist). Tech executives face a critical question: Are engineering teams actually embracing these tools, or are we experiencing tool friction and platform fatigue? >
-This analysis leverages microdata from the Stack Overflow Developer Surveys (2024–2025) to evaluate macro trends in developer adoption, sentiment shifts, and experience-based variance.
+- **X-axis:** Sentiment categories (Very favorable → Very unfavorable, Unsure)
+- **Y-axis:** Percentage
+- **Legend:** Color-coded by survey year (2024 vs. 2025)
+- **What it reveals:** Despite rising adoption, sentiment is polarizing rather than converging — Favorable sentiment dropped while Unfavorable/Very unfavorable both grew sharply, pointing to a "trust but verify" posture rather than blind trust.
 
-🏢 Executive Report: Navigating the AI Hype Cycle in Engineering Teams
-Business Background & Problem Statement
-Over the last two years, organizations have aggressively invested capital into enterprise AI coding assistants (e.g., GitHub Copilot, Gemini Code Assist). Tech executives face a critical question: Are engineering teams actually embracing these tools, or are we experiencing tool friction and platform fatigue?
+#### Chart 3: Experience Cohort Variance ("The Guidance Gap")
 
-This analysis leverages microdata from the Stack Overflow Developer Surveys (2024–2025) to evaluate macro trends in developer adoption, sentiment shifts, and experience-based variance.
+- **Layout:** Grouped bars split by experience tier (Junior ≤ 3 yrs vs. Senior > 3 yrs)
+- **What it reveals:** Junior engineers consistently adopt AI tools at a higher rate than seniors in both years (70.8% → 83.9% vs. 58.7% → 78.2%), though the gap narrowed from 12.1 points to 5.6 points — seniors are catching up.
 
-💡 Key Data-Driven Insights
-Insight 1: AI Tools are No Longer Optional. YoY data shows overall developer adoption climbed past the two-thirds threshold by 2025. The "Wait and See" cohort dropped significantly, confirming that workflows are permanently modernizing.
+---
 
-Insight 2: Pragmatic Skepticism Trumps Blind Trust. Despite soaring adoption rates, developer sentiment indicates a clear maturity curve. The majority of developers maintain a "trust but verify" stance, meaning engineering leaders cannot expect AI to replace thorough code-review processes.
+## Executive Report: Navigating the AI Hype Cycle in Engineering Teams
 
-Insight 3: The Junior Guidance Gap. Junior engineers adopt and rely on AI tools significantly faster than seniors. While this accelerates initial velocity, it introduces a business risk regarding code quality and architectural foundations if left unmonitored by senior oversight.
+### Key Data-Driven Insights
 
-🚀 Strategic Recommendations for Leadership
-Establish Guardrails for Junior Staff: Create structured internal guidelines on how junior engineers use AI tools, ensuring they don't bypass deep structural learning.
+**Insight 1 — AI tools are no longer optional.**
+YoY data shows overall developer adoption climbed past the two-thirds threshold by 2025. The "wait and see" cohort dropped significantly, confirming that workflows are permanently modernizing.
 
-Optimize Enterprise Spending: Since adoption is cementing at nearly 70%, shift focus from "trial periods" to long-term bulk enterprise licensing to maximize ROI.
+**Insight 2 — Pragmatic skepticism trumps blind trust.**
+Despite soaring adoption, sentiment data shows a clear maturity curve: developers increasingly hold a "trust but verify" stance. Engineering leaders should not expect AI to replace thorough code review.
 
-Implement AI-Specific Code-Review Audits: Lean into the developer consensus of "Pragmatic Skepticism" by formalizing security and quality gates specifically for AI-generated code snippets.
+**Insight 3 — The Junior Guidance Gap.**
+Junior engineers adopt and rely on AI tools significantly faster than seniors. This accelerates initial velocity but introduces risk to code quality and architectural foundations if left unmonitored by senior oversight.
+
+### Strategic Recommendations for Leadership
+
+1. **Establish guardrails for junior staff** — create structured internal guidelines so junior engineers don't bypass deep structural learning by over-relying on AI output.
+2. **Optimize enterprise spending** — with adoption cementing near 70–80%, shift focus from trial licenses to long-term bulk enterprise licensing to maximize ROI.
+3. **Implement AI-specific code-review audits** — formalize security and quality gates specifically for AI-generated code, in line with the developer consensus of "pragmatic skepticism."
