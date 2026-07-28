@@ -53,7 +53,8 @@ GROUP BY survey_year, "AISelect"
 ORDER BY survey_year ASC, percentage DESC;```
 
 ####Query 2: YoY Shift in Developer Sentiment / Trust
-```SELECT 
+```sql
+SELECT 
     survey_year,
     "AISent" AS ai_sentiment,
     COUNT(*) AS count,
@@ -64,7 +65,8 @@ GROUP BY survey_year, "AISent"
 ORDER BY survey_year ASC, percentage DESC;```
 
 ###Query 3: Experience Level Breakdown (Junior vs Senior)
-```SELECT 
+ ```sql
+SELECT 
     survey_year,
     CASE WHEN "YearsCodePro" <= 3 THEN 'Junior (<=3 yrs exp)'
          ELSE 'Senior (>3 yrs exp)' END AS experience_tier,
@@ -77,7 +79,7 @@ GROUP BY survey_year, experience_tier, "AISelect"
 ORDER BY survey_year ASC, experience_tier ASC, percentage DESC;```
 
 
-## 🔄 Project Phase: 5. SHARE (Data Visualizations)
+### 🔄 Project Phase: 5. SHARE (Data Visualizations)
 
 ### 📈 Executive Data Storytelling
 The following visualizations illustrate the macro shifts in developer behavior over the last two years, highlighting the definitive transition from experimental tool-testing to normalized production workflows.
