@@ -77,39 +77,27 @@ GROUP BY survey_year, experience_tier, "AISelect"
 ORDER BY survey_year ASC, experience_tier ASC, percentage DESC;```
 
 
-
-🏢 Executive Report: Navigating the AI Hype Cycle in Engineering Teams
-Business Background & Problem Statement
-Over the last two years, organizations have aggressively invested capital into enterprise AI coding assistants (e.g., GitHub Copilot, Gemini Code Assist). Tech executives face a critical question: Are engineering teams actually embracing these tools, or are we experiencing tool friction and platform fatigue?
-
-This analysis leverages microdata from the Stack Overflow Developer Surveys (2024–2025) to evaluate macro trends in developer adoption, sentiment shifts, and experience-based variance.
-
-💡 Key Data-Driven Insights
-Insight 1: AI Tools are No Longer Optional. YoY data shows overall developer adoption climbed past the two-thirds threshold by 2025. The "Wait and See" cohort dropped significantly, confirming that workflows are permanently modernizing.
-
-Insight 2: Pragmatic Skepticism Trumps Blind Trust. Despite soaring adoption rates, developer sentiment indicates a clear maturity curve. The majority of developers maintain a "trust but verify" stance, meaning engineering leaders cannot expect AI to replace thorough code-review processes.
-
-Insight 3: The Junior Guidance Gap. Junior engineers adopt and rely on AI tools significantly faster than seniors. While this accelerates initial velocity, it introduces a business risk regarding code quality and architectural foundations if left unmonitored by senior oversight.
-
-🚀 Strategic Recommendations for Leadership
-Establish Guardrails for Junior Staff: Create structured internal guidelines on how junior engineers use AI tools, ensuring they don't bypass deep structural learning.
-
-Optimize Enterprise Spending: Since adoption is cementing at nearly 70%, shift focus from "trial periods" to long-term bulk enterprise licensing to maximize ROI.
-
-Implement AI-Specific Code-Review Audits: Lean into the developer consensus of "Pragmatic Skepticism" by formalizing security and quality gates specifically for AI-generated code snippets.
-
-
-
 ## 🔄 Project Phase: 5. SHARE (Data Visualizations)
 
 ### 📈 Executive Data Storytelling
 The following visualizations illustrate the macro shifts in developer behavior over the last two years, highlighting the definitive transition from experimental tool-testing to normalized production workflows.
+Chart 1: AI Tool Adoption Rates (YoY)X-Axis: Year (2024 vs. 2025)Y-Axis: Percentage (0% to 100%)Series/Legend: Yes (Adopting), No, but planning to, No, and not planning toWhat it reveals: The visual shrinking of the "No" buckets and the expanding "Yes" block.
+
+Chart 2: Developer Trust Maturity Curve (YoY)X-Axis: Sentiment Categories (Highly Trust, Somewhat Trust, Neither Trust nor Distrust, etc.)Y-Axis: PercentageSeries/Legend: Color-coded by Year (2024 vs. 2025)What it reveals: A clear visual plateau showing that despite massive adoption, developers are moving into the pragmatic "Neither Trust nor Distrust" middle ground.
+
+Chart 3: Experience Cohort Variance Layout: Two side-by-side grouped charts—one for Junior ($\le 3$ years) and one for Senior ($>3$ years).What it reveals: Highlights the "Junior Guidance Gap," showing that the "Yes" adoption line peaks significantly higher for less experienced engineers.📂 Updating Your Repository with Visuals
 
 #Tableau Notebook Link: https://public.tableau.com/app/profile/priyanka.patil2211/viz/AIAdoptionTrends2024-2025/AIAdoptionTrends2024-2025?showOnboarding=true
 
 
 🏢 Business Background & Problem Statement
 Over the last two years, organizations have aggressively invested capital into enterprise AI coding assistants (e.g., GitHub Copilot, Gemini Code Assist). Tech executives face a critical question: Are engineering teams actually embracing these tools, or are we experiencing tool friction and platform fatigue? >
+This analysis leverages microdata from the Stack Overflow Developer Surveys (2024–2025) to evaluate macro trends in developer adoption, sentiment shifts, and experience-based variance.
+
+🏢 Executive Report: Navigating the AI Hype Cycle in Engineering Teams
+Business Background & Problem Statement
+Over the last two years, organizations have aggressively invested capital into enterprise AI coding assistants (e.g., GitHub Copilot, Gemini Code Assist). Tech executives face a critical question: Are engineering teams actually embracing these tools, or are we experiencing tool friction and platform fatigue?
+
 This analysis leverages microdata from the Stack Overflow Developer Surveys (2024–2025) to evaluate macro trends in developer adoption, sentiment shifts, and experience-based variance.
 
 💡 Key Data-Driven Insights
