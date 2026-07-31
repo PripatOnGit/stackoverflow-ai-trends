@@ -2,7 +2,9 @@
 
 Analysis of shifting dynamics between software engineers and AI productivity tools, using microdata from the 2024 and 2025 Stack Overflow Developer Surveys.
 
-🔗 **Live Dashboard:** [AI Adoption Trends 2024–2025 — Tableau Public](https://public.tableau.com/app/profile/priyanka.patil2211/viz/AIAdoptionGuidanceGapDashboard/AIAdoptionSurveyDashboard)
+🔗 **Live Dashboard:** [AI Adoption YoY AI Adoption and Guidance Gap — Tableau Public](https://public.tableau.com/app/profile/priyanka.patil2211/viz/AIAdoptionGuidanceGapDashboard/AIAdoptionSurveyDashboard)
+
+🔗 **Live Dashboard:** [AI Adoption Trust Sentiments — Tableau Public](https://public.tableau.com/app/profile/priyanka.patil2211/viz/AIAdoption_TrustSetiments/TrustSetimentsDashboard)
 
 
 ---
