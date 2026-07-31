@@ -6,6 +6,8 @@ Analysis of shifting dynamics between software engineers and AI productivity too
 
 🔗 **Live Dashboard:** [AI Adoption Trust Sentiments — Tableau Public](https://public.tableau.com/app/profile/priyanka.patil2211/viz/AIAdoption_TrustSetiments/TrustSetimentsDashboard)
 
+🔗 **Live Dashboard:** [AI Adoption Trust Sentiments — Tableau Public](https://public.tableau.com/app/profile/priyanka.patil2211/viz/AIAdoption_TrustSetiments/TrustSetimentsDashboard)
+
 ---
 
 ## Phase 1: Ask
